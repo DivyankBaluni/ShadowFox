@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divyank — Web Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <a href="#hero" class="nav-logo">Div<span class="dot">.Dev</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+
+      <div class="hero-content reveal">
+        <span class="hero-tag">
+          <span class="tag-dot"></span>
+          Available for Opportunities
+        </span>
+
+        <h1 class="hero-heading">
+          Hi, I'm <span class="gradient-text">Divyank</span>
+        </h1>
+        <p class="hero-sub">
+          AI Engineer <span class="amp">&amp;</span> Web Developer
+        </p>
+        <p class="hero-desc">
+          Engineering student building intelligent interfaces at the
+          intersection of AI and modern web development.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="assets/Resume.pdf" class="btn btn--ghost">Download Resume</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">GATE</span>
+            <span class="stat-label">2027 Prep</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-card">
+          <div class="card-header">
+            <div class="card-dots">
+              <span class="cd cd--red"></span>
+              <span class="cd cd--yellow"></span>
+              <span class="cd cd--green"></span>
+            </div>
+            <span class="card-title">divdev.labs</span>
+          </div>
+          <div class="card-body">
+            <div class="code-line">
+              <span class="kw">const</span> <span class="va">divyank</span> = {
+            </div>
+            <div class="code-line indent">
+              <span class="ky">role</span>:
+              <span class="st">"Web Developer"</span>,
+            </div>
+            <div class="code-line indent">
+              <span class="ky">focus</span>:
+              <span class="st">"Frontend + AI"</span>,
+            </div>
+            <div class="code-line indent">
+              <span class="ky">goal</span>: <span class="st">"GATE 2027"</span>,
+            </div>
+            <div class="code-line">};</div>
+            <div class="code-line blink-line">
+              <span class="cursor">|</span>
+            </div>
+          </div>
+          <div class="card-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section class="section about" id="about">
+      <div class="section-bg-alt"></div>
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>ABOUT ME</span>
+          <span class="label-line-reverse"></span>
+        </div>
+        <h2 class="section-title reveal">Who I Am</h2>
+
+        <div class="about-grid">
+          <div class="about-image-col reveal">
+            <div class="about-avatar-wrap">
+              <div class="avatar-ring"></div>
+              <div class="avatar-inner">
+                <div class="avatar-initials">DB</div>
+              </div>
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="about-badge">
+              <span
+                class="chip-icon"
+                style="background: rgb(255, 124, 1)"
+              ></span>
+              <div>
+                <p class="badge-title">GATE 2027</p>
+                <p class="badge-sub">Computer Science</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-col reveal">
+            <p class="about-intro">
+              I'm a <strong>Computer Science Engineering</strong> student
+              passionate about building at the intersection of artificial
+              intelligence and modern frontend development.
+            </p>
+            <p class="about-body">
+              My journey spans crafting visually stunning interfaces while
+              deeply exploring AI systems, prompt engineering, and automation
+              workflows. I believe great software is both intelligent and
+              beautiful.
+            </p>
+            <p class="about-body">
+              Currently focused on preparing for
+              <strong>GATE 2027</strong> while building real-world projects that
+              push my understanding of AI applications and frontend
+              architecture.
+            </p>
+
+            <div class="about-interests">
+              <div class="interest-chip">
+                <span class="chip-icon" style="background: cyan"></span> UI/UX
+              </div>
+              <div class="interest-chip">
+                <span class="chip-icon" style="background: #ff6fad"></span>
+                Frontend Dev
+              </div>
+              <div class="interest-chip">
+                <span class="chip-icon" style="background: #ffd16f"></span> Web
+                development
+              </div>
+              <div class="interest-chip">
+                <span class="chip-icon" style="background: violet"></span> GATE
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SKILLS ═══════════ -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>SKILLS</span>
+          <span class="label-line-reverse"></span>
+        </div>
+        <h2 class="section-title reveal">Tech Arsenal</h2>
+        <p class="section-sub reveal">Technologies and tools I work with</p>
+
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap sk--purple">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
+              </div>
+              <h3 class="skill-cat">Frontend</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill">HTML5</span>
+              <span class="pill">CSS3</span>
+              <span class="pill">JavaScript</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <span class="skill-name">HTML5</span>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="90"></div>
+                </div>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">CSS3</span>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="85"></div>
+                </div>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="75"></div>
+                </div>
+                <span class="skill-pct">75%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Programming -->
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap sk--pink">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3 class="skill-cat">Programming</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill--pink">Python</span>
+              <span class="pill pill--pink">C++</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <span class="skill-name">Python</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill--pink" data-width="80"></div>
+                </div>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">C++</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill--pink" data-width="70"></div>
+                </div>
+                <span class="skill-pct">70%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap sk--purple">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                  />
+                </svg>
+              </div>
+              <h3 class="skill-cat">Tools</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill">Git</span>
+              <span class="pill">GitHub</span>
+              <span class="pill">VS Code</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <span class="skill-name">Git</span>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="78"></div>
+                </div>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">GitHub</span>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="82"></div>
+                </div>
+                <span class="skill-pct">82%</span>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">VS Code</span>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="95"></div>
+                </div>
+                <span class="skill-pct">95%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI -->
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap sk--pink">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"
+                  />
+                  <path
+                    d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"
+                  />
+                </svg>
+              </div>
+              <h3 class="skill-cat">AI / Automation</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill--pink">Prompt Engineering</span>
+              <span class="pill pill--pink">AI Automation</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <span class="skill-name">Prompt Engineering</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill--pink" data-width="85"></div>
+                </div>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">AI Automation</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fill--pink" data-width="70"></div>
+                </div>
+                <span class="skill-pct">70%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PROJECTS ═══════════ -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>PROJECTS</span>
+          <span class="label-line-reverse"></span>
+        </div>
+        <h2 class="section-title reveal">Featured Work</h2>
+        <p class="section-sub reveal">Things I've built and shipped</p>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card glass reveal">
+            <div class="project-header">
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+            </div>
+            <div class="project-visual pv--space">
+              <div class="pv-stars"></div>
+              <div class="pv-planet"></div>
+              <div class="pv-orbit"></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Analytics Dashboard</h3>
+              <p class="project-desc">
+                A modern analytics dashboard presenting business metrics through
+                intuitive KPI cards, charts, and responsive layouts.
+              </p>
+              <div class="project-footer">
+                <a
+                  href="https://dashboardanalystics.netlify.app/"
+                  class="project-link"
+                  aria-label="View Analytics Dashboard"
+                  >View Project →</a
+                >
+                <a
+                  href="https://github.com/DivyankBaluni/Analystics_Dashboard"
+                  class="project-link-gh"
+                  aria-label="GitHub for Analytics Dashboard"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.52 1.05 1.52 1.05.89 1.56 2.33 1.11 2.9.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.38 9.38 0 0 1 12 7.07c.85 0 1.7.12 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass reveal">
+            <div class="project-header">
+              <div class="project-tags">
+                <span class="tag tag--pink">HTML</span>
+                <span class="tag tag--pink">CSS</span>
+                <span class="tag tag--pink">JS</span>
+              </div>
+            </div>
+            <div class="project-visual pv--portfolio">
+              <div class="pv-browser">
+                <div class="pv-browser-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="pv-browser-body">
+                  <div class="pv-line pv-line--short"></div>
+                  <div class="pv-line"></div>
+                  <div class="pv-line pv-line--medium"></div>
+                  <div class="pv-line pv-line--short"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                This very portfolio — a handcrafted dark premium UI with
+                glassmorphism card, and scroll-reveal animations.
+              </p>
+              <div class="project-footer">
+                <a
+                  href="#"
+                  class="project-link project-link--pink"
+                  aria-label="View Portfolio project"
+                  >View Project →</a
+                >
+                <a
+                  href="htttps://github.com/DivyankBaluni/ShadowFox/Portfolio"
+                  class="project-link-gh"
+                  aria-label="GitHub for Portfolio"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.52 1.05 1.52 1.05.89 1.56 2.33 1.11 2.9.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.38 9.38 0 0 1 12 7.07c.85 0 1.7.12 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-glow project-glow--pink"></div>
+          </article>
+
+          <!-- Project 3 — Coming Soon -->
+          <article class="project-card glass project-card--coming reveal">
+            <div class="project-header">
+              <div class="project-tags">
+                <span class="tag tag--purple">Python</span>
+                <span class="tag tag--purple">AI</span>
+              </div>
+            </div>
+            <div class="project-visual pv--ai">
+              <div class="ai-rings">
+                <div class="ai-ring ar--1"></div>
+                <div class="ai-ring ar--2"></div>
+                <div class="ai-ring ar--3"></div>
+              </div>
+              <div class="ai-core">AI</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">FRIDAY AI Assistant</h3>
+              <p class="project-desc">
+                A personal AI assistant inspired by JARVIS — capable of voice
+                commands, task automation, and intelligent responses.
+              </p>
+              <div class="project-footer">
+                <span class="coming-badge">
+                  <span class="pulse-dot"></span>
+                  Coming Soon
+                </span>
+              </div>
+            </div>
+            <div class="coming-overlay">
+              <span>In Development</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ RESUME ═══════════ -->
+    <section class="section resume" id="resume">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>RESUME</span>
+          <span class="label-line-reverse"></span>
+        </div>
+        <h2 class="section-title reveal">Education & Experience</h2>
+
+        <div class="resume-grid">
+          <div class="timeline reveal">
+            <h3 class="timeline-title">Education</h3>
+            <div class="timeline-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content glass">
+                <span class="tl-period">2024 — Present</span>
+                <h4 class="tl-role">B.Tech — Computer Science Engineering</h4>
+                <p class="tl-place">University / College Name</p>
+                <p class="tl-desc">
+                  Focusing on algorithms, data structures, AI/ML, and web
+                  development. Preparing for GATE 2027 alongside academics.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">GATE</span>
+                  <span class="tl-tag">AI</span>
+                  <span class="tl-tag">Web Dev</span>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-dot tl-dot--pink"></div>
+              <div class="tl-content glass">
+                <span class="tl-period">2026 — Ongoing</span>
+                <h4 class="tl-role">GATE 2027 Preparation</h4>
+                <p class="tl-place">Self-Directed Study</p>
+                <p class="tl-desc">
+                  Intensive preparation covering core CS subjects: OS, DBMS,
+                  Networks, Theory of Computation, and Algorithms.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag tl-tag--pink">OS</span>
+                  <span class="tl-tag tl-tag--pink">DBMS</span>
+                  <span class="tl-tag tl-tag--pink">TOC</span>
+                  <span class="tl-tag tl-tag--pink">DSA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-cta reveal">
+            <div class="resume-card glass">
+              <div class="rc-glow"></div>
+              <div class="rc-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+              </div>
+              <h3 class="rc-title">Download Full Resume</h3>
+              <p class="rc-desc">
+                Get a complete overview of my education, projects, skills, and
+                achievements in PDF format.
+              </p>
+              <a
+                href="assets/Resume.pdf"
+                class="btn btn--primary rc-btn"
+                download
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download Resume
+              </a>
+              <div class="rc-meta">
+                <span>PDF • Updated June 2026</span>
+              </div>
+            </div>
+
+            <div class="resume-achievements glass">
+              <h4 class="ra-title">Quick Highlights</h4>
+              <ul class="ra-list">
+                <li class="ra-item">
+                  <span class="ra-dot"></span>
+                  3+ self-initiated projects shipped
+                </li>
+                <li class="ra-item">
+                  <span class="ra-dot ra-dot--pink"></span>
+                  AI automation & prompt engineering
+                </li>
+                <li class="ra-item">
+                  <span class="ra-dot ra-dot"></span>
+                  Actively preparing for GATE 2027
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="section contact" id="contact">
+      <div class="section-bg-alt"></div>
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>CONTACT</span>
+          <span class="label-line-reverse"></span>
+        </div>
+        <h2 class="section-title reveal">Let's Connect</h2>
+        <p class="section-sub reveal">
+          Open to collaborations, opportunities, and interesting conversations
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-links reveal">
+            <a href="mailto:balunidivyank@gmail.com" class="contact-card glass">
+              <div class="cc-icon cc-icon--purple">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div class="cc-body">
+                <span class="cc-label">Email</span>
+                <span class="cc-value">balunidivyank@gmail.com</span>
+              </div>
+              <span class="cc-arrow">→</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/divyank-baluni-7150a2326/"
+              target="_blank"
+              rel="noopener"
+              class="contact-card glass"
+            >
+              <div class="cc-icon cc-icon--pink">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"
+                  />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div class="cc-body">
+                <span class="cc-label">LinkedIn</span>
+                <span class="cc-value">linkedin.com/in/divyank-baluni</span>
+              </div>
+              <span class="cc-arrow">→</span>
+            </a>
+
+            <a
+              href="https://github.com/DivyankBaluni"
+              target="_blank"
+              rel="noopener"
+              class="contact-card glass"
+            >
+              <div class="cc-icon cc-icon--purple">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.52 1.05 1.52 1.05.89 1.56 2.33 1.11 2.9.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.38 9.38 0 0 1 12 7.07c.85 0 1.7.12 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"
+                  />
+                </svg>
+              </div>
+              <div class="cc-body">
+                <span class="cc-label">GitHub</span>
+                <span class="cc-value">github.com/DivyankBaluni</span>
+              </div>
+              <span class="cc-arrow">→</span>
+            </a>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form glass" id="contactForm" novalidate>
+              <h3 class="cf-title">Send a Message</h3>
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Let's build something together..."
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn--primary btn--full"
+                id="submitBtn"
+              >
+                Send Message
+              </button>
+              <p class="form-note" id="formNote"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>
+          &copy Designed &amp; built by
+          <span class="footer-logo dot">Divyank Baluni</span> · 2026
+        </p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#hero">Back to top ↑</a>
+          <a href="https://github.com/DivyankBaluni" target="_blank">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
