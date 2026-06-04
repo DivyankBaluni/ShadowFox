@@ -243,7 +243,8 @@ button {
    SECTION COMMONS
 ════════════════════════════════════════ */
 .section {
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 80px 0 100px;
   position: relative;
 }
 .section-bg-alt {
@@ -267,7 +268,7 @@ button {
   letter-spacing: 0.15em;
   color: var(--subtle);
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 .label-line {
   flex: 1;
@@ -286,12 +287,12 @@ button {
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  margin-bottom: 0.75rem;
+  margin: 1.5rem 0 0.75rem;
 }
 .section-sub {
   color: var(--muted);
   font-size: 1.05rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.5rem;
 }
 
 /* ════════════════════════════════════════
@@ -602,6 +603,17 @@ button {
 }
 
 /* ════════════════════════════════════════
+   Margin issues
+════════════════════════════════════════ */
+.about, .skills{
+  scroll-margin-top: 50px;
+}
+
+.projects, .contact{
+  scroll-margin-top: 30px;
+}
+
+/* ════════════════════════════════════════
    ABOUT
 ════════════════════════════════════════ */
 .about-grid {
@@ -610,6 +622,14 @@ button {
   gap: 4rem;
   align-items: start;
   margin-top: 3rem;
+}
+
+.about-image-col {
+  margin: 50px;
+}
+
+.about-text-col {
+  line-height: 2.8rem;
 }
 
 .about-avatar-wrap {
@@ -1322,7 +1342,7 @@ button {
 .resume-cta {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .resume-card {
@@ -1415,11 +1435,36 @@ button {
   background: var(--bg-alt);
 }
 
+.contact .section-title{
+  max-width: 500px;
+}
+
+.contact .section-label {
+  margin-bottom: 3%;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  gap: 5rem;
+  align-items: end;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact .section-title {
+  max-width: 600px;
+  margin: 0;
+  line-height: 0.95;
+}
+
+.contact .section-sub {
+  max-width: 500px;
+  margin: 0;
 }
 
 .contact-links {
@@ -1432,7 +1477,7 @@ button {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem;
   transition: all var(--transition);
   position: relative;
   overflow: hidden;
@@ -1502,6 +1547,11 @@ button {
 /* Form */
 .contact-form {
   padding: 2rem;
+  width: 100%;
+}
+
+.contact-form-wrap{
+  width: 100%;
 }
 .cf-title {
   font-family: var(--font-display);
