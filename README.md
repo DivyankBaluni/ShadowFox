@@ -29,7 +29,7 @@ This repository holds all the tasks and projects I completed as part of the Shad
 | 📁 **Folder** | `Portfolio/` |
 
 **About the project:**
-A responsive personal portfolio website showcasing my background, skills, and projects. Built from scratch using only vanilla HTML, CSS, and JavaScript — no frameworks or libraries.
+A responsive personal portfolio website showcasing my background, skills, and projects. Built from scratch using HTML, CSS, and JavaScript.
 
 **Key Features:**
 - Responsive layout that works on desktop and mobile
