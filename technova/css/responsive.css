@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════
+   RESPONSIVE — All breakpoints in one place
+═══════════════════════════════════════ */
+
+/* Tablet: <= 1024px */
+@media (max-width: 1024px) {
+  .hero {
+    background-image: none !important;
+    min-height: auto;
+    padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    white-space: normal;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+  }
+  .hero-sub {
+    margin: 0 auto 35px;
+    text-align: center;
+  }
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .categories-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); }
+
+  .plp-layout { grid-template-columns: 220px 1fr; }
+  .products-grid, .products-grid--4col { grid-template-columns: repeat(2, 1fr); }
+
+  .pdp-layout { grid-template-columns: 1fr; }
+  .gallery { position: static; }
+  .related-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .cart-layout { grid-template-columns: 1fr 300px; }
+  .checkout-layout { grid-template-columns: 1fr 300px; }
+
+  .quick-view-content { grid-template-columns: 1fr; }
+  .quick-view-image { max-height: 300px; }
+}
+
+/* Mobile: <= 768px */
+@media (max-width: 768px) {
+  :root {
+    --spacing-3xl: 64px;
+    --spacing-2xl: 40px;
+  }
+
+  /* Nav */
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-nav { display: flex; }
+
+  .search-bar { max-width: none; flex: 1; }
+
+  /* Hero */
+  .hero { padding: var(--spacing-2xl) var(--spacing-md); min-height: auto; background-image: none !important;}
+  .hero h1 { font-size: clamp(30px, 7vw, 44px); letter-spacing: -1px; white-space: normal; }
+  .hero-showcase {
+    display: none;
+  }
+
+  /* Categories */
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Deal banner */
+  .deal-banner { flex-direction: column; align-items: flex-start; padding: var(--spacing-lg); }
+
+  /* Newsletter */
+  .newsletter-form { flex-direction: column; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+  /* PLP */
+  .plp-layout { grid-template-columns: 1fr; }
+  .filters-sidebar { display: none; position: fixed; inset: 0; top: var(--nav-height); z-index: 150; border-radius: 0; overflow-y: auto; padding-bottom: 80px; }
+  .filters-sidebar.mobile-open { display: block; }
+  .filter-mobile-toggle { display: flex; gap: 8px; align-items: center; }
+  .products-grid, .products-grid--4col { grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md); }
+
+  /* PDP */
+  .pdp-actions { flex-direction: column; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Cart */
+  .cart-layout { grid-template-columns: 1fr; }
+  .cart-item { flex-wrap: wrap; }
+  .cart-item-controls { width: 100%; justify-content: space-between; }
+
+  /* Checkout */
+  .checkout-layout { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-grid .full { grid-column: 1; }
+  .order-sidebar { display: none; }
+
+  /* Toast */
+  .toast-container { left: 16px; right: 16px; bottom: 16px; }
+  .toast { min-width: unset; }
+
+  .section-header { flex-direction: column; align-items: flex-start; }
+}
+
+/* Small mobile: <= 480px */
+@media (max-width: 480px) {
+  .container { padding: 0 var(--spacing-md); }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid, .products-grid--4col { grid-template-columns: repeat(2, 1fr); gap: var(--spacing-sm); }
+  .hero-ctas { flex-direction: column; align-items: center; width: 100%; gap: 12px; }
+  .hero-ctas a { width: 100%; text-align: center; justify-content: center; }
+  .hero-stats { flex-wrap: wrap; gap: var(--spacing-md); }
+  .countdown { gap: 4px; }
+  .countdown-unit { padding: 8px 10px; min-width: 48px; }
+  .countdown-value { font-size: 20px; }
+}

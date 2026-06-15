@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all TechNova products — laptops, phones, audio, monitors and accessories with advanced filters.">
+  <title>Products — TechNova</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="index.html" class="logo">
+          <img src="assets/logo-light.png" class="logo-light" alt="TechNova" />
+          <img src="assets/logo-dark.png" class="logo-dark" alt="TechNova" />
+        </a>
+        <nav class="nav-links" aria-label="Site links">
+          <a href="index.html" class="active">Home</a>
+          <a href="products.html">Products</a>
+          <a href="products.html?category=Laptops">Laptops</a>
+          <a href="products.html?category=Smartphones">Phones</a>
+          <a href="products.html?category=Audio">Audio</a>
+        </nav>
+        <form class="search-bar" id="searchForm" role="search">
+          <span class="search-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </span>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search products, brands…"
+            aria-label="Search"
+            autocomplete="off"
+          />
+          <div
+            class="search-results-dropdown"
+            id="searchDropdown"
+            role="listbox"
+          ></div>
+        </form>
+        <div class="nav-actions">
+          <button
+            class="nav-icon-btn nav-btn"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <svg
+              class="theme-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <!-- Sun -->
+              <circle class="sun-core" cx="12" cy="12" r="5" />
+
+              <g class="sun-rays">
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </g>
+
+              <!-- Moon -->
+              <path
+                class="moon-shape"
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+              />
+            </svg>
+          </button>
+          <a
+            href="wishlist.html"
+            class="nav-btn"
+            aria-label="Wishlist"
+            title="Wishlist"
+            ><button class="nav-btn" aria-label="Wishlist">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+            </button>
+            <span
+              class="wishlist-badge"
+              id="wishlistBadge"
+              aria-live="polite"
+            ></span>
+          </a>
+          <a href="cart.html" class="nav-btn" aria-label="Shopping cart"
+            ><button class="nav-btn" aria-label="Wishlist">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path
+                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                />
+              </svg>
+            </button>
+            <span class="cart-badge" id="cartBadge" aria-live="polite"></span>
+          </a>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">🏠 Home</a>
+  <a href="products.html">📦 All Products</a>
+  <a href="products.html?category=Laptops">💻 Laptops</a>
+  <a href="products.html?category=Smartphones">📱 Phones & Tablets</a>
+  <a href="products.html?category=Audio">🎧 Audio</a>
+  <a href="products.html?category=Monitors">🖥️ Monitors</a>
+  <a href="products.html?category=Accessories">⌨️ Accessories</a>
+  <a href="cart.html">🛒 Cart</a>
+  <a href="wishlist.html">❤️ Wishlist</a>
+</nav>
+
+<div class="container">
+  <!-- Breadcrumb + Header -->
+  <div class="plp-header">
+    <nav class="plp-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span>Products</span>
+    </nav>
+    <h1>All Products</h1>
+  </div>
+
+  <!-- Mobile filter toggle -->
+  <div class="filter-mobile-toggle">
+    <button class="btn btn-secondary btn-sm" id="filterMobileToggle" aria-label="Open filters">
+      ⚙️ Filters
+    </button>
+  </div>
+  <div id="filterOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:140"
+       class="filter-overlay"></div>
+
+  <div class="plp-layout">
+    <!-- SIDEBAR FILTERS -->
+    <aside class="filters-sidebar" aria-label="Product filters">
+      <div class="filter-header">
+        <h3>Filters</h3>
+        <button class="filter-clear-btn" onclick="clearAllFilters()" aria-label="Clear all filters">Clear All</button>
+      </div>
+
+      <!-- Category -->
+      <div class="filter-group" id="filterGroupCategory">
+        <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+          Category <span class="chevron">▾</span>
+        </div>
+        <div class="filter-options" id="filterCategories">
+          <!-- Built by JS -->
+        </div>
+      </div>
+
+      <!-- Brand -->
+      <div class="filter-group" id="filterGroupBrand">
+        <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+          Brand <span class="chevron">▾</span>
+        </div>
+        <div class="filter-options" id="filterBrands">
+          <!-- Built by JS -->
+        </div>
+      </div>
+
+      <!-- Price Range -->
+      <div class="filter-group">
+        <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+          Price Range <span class="chevron">▾</span>
+        </div>
+        <div class="price-range-wrapper">
+          <div class="price-range-inputs">
+            <input type="number" class="price-input" id="priceMin" min="0" max="200000" placeholder="Min" aria-label="Minimum price">
+            <span class="price-range-sep">—</span>
+            <input type="number" class="price-input" id="priceMax" min="0" max="200000" placeholder="Max" aria-label="Maximum price">
+          </div>
+          <div class="range-slider">
+            <div class="range-track"></div>
+            <div class="range-fill" id="rangeFill"></div>
+            <input type="range" id="sliderMin" min="0" max="200000" value="0" aria-label="Minimum price slider">
+            <input type="range" id="sliderMax" min="0" max="200000" value="200000" aria-label="Maximum price slider">
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating -->
+      <div class="filter-group">
+        <div class="filter-group-title" onclick="toggleFilterGroup(this)">
+          Minimum Rating <span class="chevron">▾</span>
+        </div>
+        <div class="filter-options" id="filterRating">
+          <!-- Built by JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- Active filter tags -->
+      <div class="active-filters" id="activeFilters" aria-label="Active filters"></div>
+
+      <!-- Toolbar -->
+      <div class="plp-toolbar">
+        <span class="plp-count" id="productCount" aria-live="polite">
+          Showing <strong>15</strong> of <strong>15</strong> products
+        </span>
+        <div class="plp-toolbar-right">
+          <select class="sort-select" id="sortSelect" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="rating">Top Rated</option>
+            <option value="newest">Newest First</option>
+            <option value="popular">Most Popular</option>
+          </select>
+          <div class="view-toggle" role="group" aria-label="View mode">
+            <button class="view-btn active" data-view="grid" aria-label="Grid view" title="Grid view">⊞</button>
+            <button class="view-btn" data-view="list" aria-label="List view" title="List view">☰</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid" aria-label="Product listing">
+        <!-- Loaded by JS -->
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal-overlay" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 class="modal-title" id="quickViewTitle">Quick View</h2>
+      <button class="modal-close" id="closeQuickView" aria-label="Close quick view">✕</button>
+    </div>
+    <div id="quickViewBody"><!-- filled by JS --></div>
+  </div>
+</div>
+
+<!-- COMPARE MODAL -->
+<div class="modal-overlay" id="compareModal" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+  <div class="modal" style="max-width:900px">
+    <div class="modal-header">
+      <h2 class="modal-title" id="compareTitle">Compare Products</h2>
+      <button class="modal-close" id="closeCompare" aria-label="Close compare">✕</button>
+    </div>
+    <div id="compareBody" style="padding:var(--spacing-lg)"><!-- filled by JS --></div>
+  </div>
+</div>
+
+<!-- COMPARE BAR -->
+<div class="compare-bar" id="compareBar" role="complementary" aria-label="Compare products">
+  <span style="font-size:13px;font-weight:600;white-space:nowrap">Compare:</span>
+  <div class="compare-bar-items" id="compareSlots"></div>
+  <button class="btn btn-primary btn-sm" id="compareNowBtn">Compare Now</button>
+  <button class="btn btn-ghost btn-sm" onclick="document.querySelectorAll('.compare-btn-card').forEach(b=>b.click()&&false);compareList=[];updateCompareBar()">Clear</button>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<div class="toast-container" aria-live="polite"></div>
+
+<script src="js/data/products.js"></script>
+<script src="js/utils/storage.js"></script>
+<script src="js/utils/helpers.js"></script>
+<script src="js/utils/toast.js"></script>
+<script src="js/components/cart.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/components/filters.js"></script>
+<script src="js/main.js"></script>
+<script>
+  function toggleFilterGroup(titleEl) {
+    titleEl.closest('.filter-group').classList.toggle('collapsed');
+  }
+</script>
+</body>
+</html>

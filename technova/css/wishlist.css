@@ -1,0 +1,32 @@
+/* Wishlist styles */
+.wishlist-header {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--spacing-xl);
+}
+
+.wishlist-header h1 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.wishlist-count-label {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.wishlist-empty {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

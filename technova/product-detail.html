@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — TechNova</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/product-detail.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="index.html" class="logo">
+          <img src="assets/logo-light.png" class="logo-light" alt="TechNova" />
+          <img src="assets/logo-dark.png" class="logo-dark" alt="TechNova" />
+        </a>
+        <nav class="nav-links" aria-label="Site links">
+          <a href="index.html" class="active">Home</a>
+          <a href="products.html">Products</a>
+          <a href="products.html?category=Laptops">Laptops</a>
+          <a href="products.html?category=Smartphones">Phones</a>
+          <a href="products.html?category=Audio">Audio</a>
+        </nav>
+        <form class="search-bar" id="searchForm" role="search">
+          <span class="search-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </span>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search products, brands…"
+            aria-label="Search"
+            autocomplete="off"
+          />
+          <div
+            class="search-results-dropdown"
+            id="searchDropdown"
+            role="listbox"
+          ></div>
+        </form>
+        <div class="nav-actions">
+          <button
+            class="nav-icon-btn nav-btn"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <svg
+              class="theme-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <!-- Sun -->
+              <circle class="sun-core" cx="12" cy="12" r="5" />
+
+              <g class="sun-rays">
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </g>
+
+              <!-- Moon -->
+              <path
+                class="moon-shape"
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+              />
+            </svg>
+          </button>
+          <a
+            href="wishlist.html"
+            class="nav-btn"
+            aria-label="Wishlist"
+            title="Wishlist"
+            ><button class="nav-btn" aria-label="Wishlist">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+            </button>
+            <span
+              class="wishlist-badge"
+              id="wishlistBadge"
+              aria-live="polite"
+            ></span>
+          </a>
+          <a href="cart.html" class="nav-btn" aria-label="Shopping cart"
+            ><button class="nav-btn" aria-label="Wishlist">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path
+                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                />
+              </svg>
+            </button>
+            <span class="cart-badge" id="cartBadge" aria-live="polite"></span>
+          </a>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">🏠 Home</a>
+  <a href="products.html">📦 All Products</a>
+  <a href="products.html?category=Laptops">💻 Laptops</a>
+  <a href="products.html?category=Smartphones">📱 Phones & Tablets</a>
+  <a href="products.html?category=Audio">🎧 Audio</a>
+  <a href="products.html?category=Monitors">🖥️ Monitors</a>
+  <a href="products.html?category=Accessories">⌨️ Accessories</a>
+  <a href="cart.html">🛒 Cart</a>
+  <a href="wishlist.html">❤️ Wishlist</a>
+</nav>
+
+<div class="container">
+  <!-- Breadcrumb -->
+  <nav style="padding:16px 0 0;font-size:13px;color:var(--color-text-muted);display:flex;align-items:center;gap:8px;" aria-label="Breadcrumb">
+    <a href="index.html" style="transition:color 0.2s" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color=''">Home</a>
+    <span style="color:var(--color-text-faint)">/</span>
+    <a href="products.html" id="pdpBreadcrumbCategory" style="transition:color 0.2s" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color=''">
+      <span id="pdpBreadcrumbCategoryName">Products</span>
+    </a>
+    <span style="color:var(--color-text-faint)">/</span>
+    <span id="pdpBreadcrumbName" style="color:var(--color-text)">Product</span>
+  </nav>
+
+  <!-- PDP Layout -->
+  <div class="pdp-layout">
+    <!-- Gallery -->
+    <section aria-label="Product images">
+      <div class="gallery">
+        <div class="gallery-main" tabindex="0" aria-label="Main product image (use arrow keys to navigate)">
+          <img id="galleryMain" src="" alt="Product image" loading="eager">
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs" role="list" aria-label="Product thumbnails"></div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="pdp-info" aria-label="Product information">
+      <div class="pdp-brand" id="pdpBrand"></div>
+      <h1 class="pdp-title" id="pdpTitle">Loading…</h1>
+
+      <div id="pdpRating"></div>
+
+      <div class="pdp-meta">
+        <div id="pdpStock"></div>
+        <div style="margin-left:auto;font-size:13px;color:var(--color-text-muted)" id="pdpSku"></div>
+      </div>
+
+      <div class="pdp-prices">
+        <span class="pdp-price" id="pdpPrice">—</span>
+        <div id="pdpOriginalPrice"></div>
+      </div>
+
+      <!-- Qty + ATC anchor -->
+      <div id="pdpActionsAnchor">
+        <div class="pdp-qty-row">
+          <span class="pdp-qty-label">Quantity</span>
+          <div class="qty-selector">
+            <button class="qty-btn" id="pdpQtyMinus" aria-label="Decrease quantity">−</button>
+            <div class="qty-value" id="pdpQty" aria-live="polite">1</div>
+            <button class="qty-btn" id="pdpQtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <div class="pdp-actions" style="margin-top:16px">
+          <button class="btn btn-primary btn-lg" id="pdpAddToCart">🛒 Add to Cart</button>
+          <button class="btn btn-secondary btn-lg" id="pdpBuyNow">⚡ Buy Now</button>
+          <button class="btn btn-secondary" id="pdpWishlist" style="width:auto;padding:0 16px;" aria-label="Add to wishlist">🤍 Wishlist</button>
+        </div>
+      </div>
+
+      <!-- Trust badges -->
+      <div style="display:flex;gap:12px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);margin-top:4px">
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--color-text-muted)">
+          <span>🚀</span> Fast Delivery
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--color-text-muted)">
+          <span>🔒</span> Secure Payment
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--color-text-muted)">
+          <span>↩️</span> Easy Returns
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--color-text-muted)">
+          <span>✅</span> Genuine Product
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="pdp-tabs">
+        <nav class="tabs-nav" role="tablist" aria-label="Product information tabs">
+          <button class="tab-btn active" data-tab="tabDescription" role="tab" aria-selected="true" aria-controls="tabDescription">Description</button>
+          <button class="tab-btn" data-tab="tabSpecs" role="tab" aria-selected="false" aria-controls="tabSpecs">Specifications</button>
+          <button class="tab-btn" data-tab="tabReviews" role="tab" aria-selected="false" aria-controls="tabReviews">Reviews</button>
+        </nav>
+
+        <div class="tab-pane active" id="tabDescription" role="tabpanel">
+          <p class="pdp-desc" id="tabDescription"></p>
+        </div>
+        <div class="tab-pane" id="tabSpecs" role="tabpanel">
+          <!-- Filled by JS -->
+        </div>
+        <div class="tab-pane" id="tabReviews" role="tabpanel">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Related Products -->
+  <section class="related-products" id="relatedSection" aria-labelledby="relatedTitle">
+    <div class="section-header">
+      <div>
+        <div class="section-label">You Might Also Like</div>
+        <h2 class="section-title" id="relatedTitle">Related Products</h2>
+      </div>
+    </div>
+    <div class="related-grid" id="relatedGrid">
+      <!-- Filled by JS -->
+    </div>
+  </section>
+</div>
+
+<!-- Sticky ATC Bar -->
+<div class="sticky-atc" id="stickyAtc" aria-label="Sticky add to cart">
+  <div class="sticky-atc-info">
+    <div class="sticky-atc-name" id="stickyName"></div>
+    <div class="sticky-atc-price" id="stickyPrice"></div>
+  </div>
+  <div class="sticky-atc-actions">
+    <button class="btn btn-primary" id="stickyAtcBtn">🛒 Add to Cart</button>
+    <a href="cart.html" class="btn btn-secondary">View Cart</a>
+  </div>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<div class="toast-container" aria-live="polite"></div>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;margin-top:0;padding-top:0">
+      <span>© 2026 TechNova. All rights reserved.</span>
+      <a href="index.html" style="color:var(--color-primary)">← Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data/products.js"></script>
+<script src="js/utils/storage.js"></script>
+<script src="js/utils/helpers.js"></script>
+<script src="js/utils/toast.js"></script>
+<script src="js/components/cart.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/components/gallery.js"></script>
+<script src="js/components/filters.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

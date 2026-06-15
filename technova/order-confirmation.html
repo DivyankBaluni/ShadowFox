@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed — TechNova</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- NAVBAR minimal -->
+<nav class="navbar" role="navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo"><div class="logo-dot"></div>Tech<span>Nova</span></a>
+    <div style="flex:1"></div>
+    <button class="nav-btn" id="themeToggle" aria-label="Toggle theme">☀️</button>
+    <a href="wishlist.html" class="nav-btn" aria-label="Wishlist" title="Wishlist">❤️
+      <span class="wishlist-badge" id="wishlistBadge" aria-live="polite"></span>
+    </a>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">🏠 Home</a>
+  <a href="wishlist.html">❤️ Wishlist</a>
+</nav>
+
+<div class="container">
+  <div class="order-confirmation" role="main" aria-label="Order confirmation">
+    <div class="order-confirmation-icon" aria-hidden="true">✓</div>
+    <h1>Order Confirmed!</h1>
+    <p style="color:var(--color-text-muted);font-size:16px;margin-bottom:16px">
+      Thank you for your purchase. Your order has been placed successfully.
+    </p>
+    <div class="order-id" aria-label="Order ID">Order #<span id="orderId">TN-XXXXXXXX</span></div>
+
+    <div class="order-details-card">
+      <h3 style="font-family:var(--font-heading);font-size:16px;font-weight:700;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--color-border)">
+        Order Details
+      </h3>
+
+      <div id="confItems" aria-label="Ordered items">
+        <!-- Filled by JS -->
+      </div>
+
+      <div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--color-border)">
+        <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px">
+          <span style="color:var(--color-text-muted)">Delivered to</span>
+          <span id="confName" style="font-weight:600"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px">
+          <span style="color:var(--color-text-muted)">Address</span>
+          <span id="confAddress" style="font-weight:500;text-align:right;max-width:200px"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:16px;font-weight:700;margin-top:12px;padding-top:12px;border-top:1px solid var(--color-border)">
+          <span>Total Paid</span>
+          <span id="confTotal" style="color:var(--color-primary);font-family:var(--font-mono)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- What's next -->
+    <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--spacing-lg);margin-top:var(--spacing-lg);text-align:left">
+      <h3 style="font-family:var(--font-heading);font-size:15px;font-weight:700;margin-bottom:14px">What happens next?</h3>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <span style="font-size:20px;flex-shrink:0">📧</span>
+          <div>
+            <div style="font-size:14px;font-weight:600">Confirmation Email</div>
+            <div style="font-size:13px;color:var(--color-text-muted)">You'll receive an email with your order details shortly.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <span style="font-size:20px;flex-shrink:0">📦</span>
+          <div>
+            <div style="font-size:14px;font-weight:600">Order Processing</div>
+            <div style="font-size:13px;color:var(--color-text-muted)">Your order will be processed and packed within 24 hours.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <span style="font-size:20px;flex-shrink:0">🚀</span>
+          <div>
+            <div style="font-size:14px;font-weight:600">Delivery</div>
+            <div style="font-size:13px;color:var(--color-text-muted)">Expected delivery in 3-5 business days.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTAs -->
+    <div style="display:flex;gap:12px;margin-top:var(--spacing-xl);justify-content:center;flex-wrap:wrap">
+      <a href="index.html" class="btn btn-primary btn-lg">Continue Shopping →</a>
+      <a href="products.html" class="btn btn-secondary btn-lg">Browse Products</a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;margin-top:0;padding-top:0">
+      <span>© 2026 TechNova. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-container" aria-live="polite"></div>
+
+<script src="js/data/products.js"></script>
+<script src="js/utils/storage.js"></script>
+<script src="js/utils/helpers.js"></script>
+<script src="js/utils/toast.js"></script>
+<script src="js/components/cart.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

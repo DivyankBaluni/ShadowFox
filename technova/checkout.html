@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — TechNova</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- NAVBAR (minimal) -->
+<nav class="navbar" role="navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo"><div class="logo-dot"></div>Tech<span>Nova</span></a>
+    <div style="flex:1"></div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--color-text-muted)">
+      <span>🔒</span> Secure Checkout
+    </div>
+    <div class="nav-actions" style="margin-left:16px">
+      <button class="nav-btn" id="themeToggle" aria-label="Toggle theme">☀️</button>
+      <a href="wishlist.html" class="nav-btn" aria-label="Wishlist" title="Wishlist">❤️
+        <span class="wishlist-badge" id="wishlistBadge" aria-live="polite"></span>
+      </a>
+    </div>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">🏠 Home</a>
+  <a href="cart.html">← Back to Cart</a>
+  <a href="wishlist.html">❤️ Wishlist</a>
+</nav>
+
+<div class="container">
+  <div class="checkout-header">
+    <nav style="font-size:13px;color:var(--color-text-muted);display:flex;gap:8px;margin-bottom:8px" aria-label="Breadcrumb">
+      <a href="index.html" style="transition:color 0.2s">Home</a>
+      <span>/</span>
+      <a href="cart.html" style="transition:color 0.2s">Cart</a>
+      <span>/</span>
+      <span>Checkout</span>
+    </nav>
+    <h1>Checkout</h1>
+  </div>
+
+  <!-- Step Indicator -->
+  <div class="step-indicator" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" aria-label="Checkout progress">
+    <div class="step active" id="stepIndicator1">
+      <div style="text-align:center">
+        <div class="step-dot">1</div>
+        <div class="step-label">Delivery</div>
+      </div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step" id="stepIndicator2">
+      <div style="text-align:center">
+        <div class="step-dot">2</div>
+        <div class="step-label">Payment</div>
+      </div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step" id="stepIndicator3">
+      <div style="text-align:center">
+        <div class="step-dot">3</div>
+        <div class="step-label">Review</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout-layout">
+    <!-- Form Steps -->
+    <main>
+
+      <!-- STEP 1: Delivery Info -->
+      <div class="checkout-form-section active" id="step1" role="form" aria-label="Delivery information">
+        <h2 class="form-title">📦 Delivery Information</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="firstName">First Name *</label>
+            <input type="text" class="form-input" id="firstName" placeholder="Divyank" autocomplete="given-name" required>
+            <span class="form-error" id="firstNameError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lastName">Last Name *</label>
+            <input type="text" class="form-input" id="lastName" placeholder="Sharma" autocomplete="family-name" required>
+            <span class="form-error" id="lastNameError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address *</label>
+            <input type="email" class="form-input" id="email" placeholder="you@example.com" autocomplete="email" required>
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number *</label>
+            <input type="tel" class="form-input" id="phone" placeholder="9876543210" autocomplete="tel" required>
+            <span class="form-error" id="phoneError"></span>
+          </div>
+          <div class="form-group full">
+            <label class="form-label" for="address">Street Address *</label>
+            <input type="text" class="form-input" id="address" placeholder="123, MG Road, Koramangala" autocomplete="street-address" required>
+            <span class="form-error" id="addressError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="city">City *</label>
+            <input type="text" class="form-input" id="city" placeholder="Bengaluru" autocomplete="address-level2" required>
+            <span class="form-error" id="cityError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="state">State</label>
+            <select class="form-input" id="state" autocomplete="address-level1">
+              <option value="Karnataka">Karnataka</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Delhi">Delhi</option>
+              <option value="West Bengal">West Bengal</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Telangana">Telangana</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pincode">PIN Code *</label>
+            <input type="text" class="form-input" id="pincode" placeholder="560001" autocomplete="postal-code" maxlength="6" required>
+            <span class="form-error" id="pincodeError"></span>
+          </div>
+        </div>
+        <div class="form-actions">
+          <a href="cart.html" class="btn btn-ghost">← Back to Cart</a>
+          <button class="btn btn-primary" id="toStep2">Continue to Payment →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Payment -->
+      <div class="checkout-form-section" id="step2" role="form" aria-label="Payment information">
+        <h2 class="form-title">💳 Payment Details</h2>
+        <div style="background:var(--color-primary-dim);border:1px solid rgba(0,229,255,0.2);border-radius:var(--radius-md);padding:12px 16px;margin-bottom:20px;font-size:13px;color:var(--color-primary);display:flex;gap:8px;align-items:center">
+          <span>🔒</span> This is a demo payment form. No real transactions occur.
+        </div>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label" for="cardNumber">Card Number *</label>
+            <div class="card-input-wrapper">
+              <input type="text" class="form-input" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" required>
+              <span class="card-icon">💳</span>
+            </div>
+            <span class="form-error" id="cardNumberError"></span>
+          </div>
+          <div class="form-group full">
+            <label class="form-label" for="cardName">Name on Card *</label>
+            <input type="text" class="form-input" id="cardName" placeholder="DIVYANK SHARMA" autocomplete="cc-name" required>
+            <span class="form-error" id="cardNameError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="expiry">Expiry Date *</label>
+            <input type="text" class="form-input" id="expiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp" required>
+            <span class="form-error" id="expiryError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cvv">CVV *</label>
+            <input type="password" class="form-input" id="cvv" placeholder="•••" maxlength="4" autocomplete="cc-csc" required>
+            <span class="form-error" id="cvvError"></span>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-ghost" id="backToStep1">← Back</button>
+          <button class="btn btn-primary" id="toStep3">Review Order →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Review -->
+      <div class="checkout-form-section" id="step3" role="form" aria-label="Order review">
+        <h2 class="form-title">📋 Review Your Order</h2>
+
+        <div style="margin-bottom:20px">
+          <h3 style="font-size:14px;font-weight:600;color:var(--color-text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px">Items</h3>
+          <div id="reviewItems"><!-- Filled by JS --></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+          <div>
+            <h3 style="font-size:14px;font-weight:600;color:var(--color-text-muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Delivery To</h3>
+            <div id="reviewDelivery" style="font-size:14px;line-height:1.7;color:var(--color-text)"></div>
+          </div>
+          <div>
+            <h3 style="font-size:14px;font-weight:600;color:var(--color-text-muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Payment</h3>
+            <div style="font-size:14px;color:var(--color-text)">💳 Card ending in <strong id="reviewCardLast">••••</strong></div>
+          </div>
+        </div>
+
+        <div id="reviewSummary" style="background:var(--color-surface-2);border-radius:var(--radius-md);padding:16px;margin-bottom:20px">
+          <!-- Filled by JS -->
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-ghost" id="backToStep2">← Back</button>
+          <button class="btn btn-primary btn-lg" id="placeOrder">
+            ✓ Place Order
+          </button>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Order Sidebar -->
+    <aside class="order-sidebar" aria-label="Order summary">
+      <h3>Your Order</h3>
+      <div id="orderSidebarItems"><!-- Filled by JS --></div>
+      <div id="orderSidebarSummary" style="margin-top:16px;border-top:1px solid var(--color-border);padding-top:16px"><!-- Filled by JS --></div>
+    </aside>
+  </div>
+</div>
+
+<div class="toast-container" aria-live="polite"></div>
+
+<script src="js/data/products.js"></script>
+<script src="js/utils/storage.js"></script>
+<script src="js/utils/helpers.js"></script>
+<script src="js/utils/toast.js"></script>
+<script src="js/components/cart.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/components/checkout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Populate card last 4 when card number changes
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('cardNumber')?.addEventListener('input', e => {
+      const val = e.target.value.replace(/\s/g, '');
+      const last4 = val.slice(-4) || '••••';
+      const el = document.getElementById('reviewCardLast');
+      if (el) el.textContent = last4.padStart(4, '•');
+    });
+  });
+</script>
+</body>
+</html>
