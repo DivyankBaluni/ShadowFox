@@ -45,7 +45,7 @@ A responsive personal portfolio website showcasing my background, skills, and pr
 
 | Detail | Info |
 |--------|------|
-| 🔗 **Live Demo** | [e-commerce-shadowfx.netlify.app](https://shadow-fox-jade.vercel.app/) |
+| 🔗 **Live Demo** | [shadow-fox-ecommerce.vercel.app](https://shadow-fox-jade.vercel.app/) |
 | 🛠️ **Tech Stack** | HTML, CSS, JavaScript |
 | 📁 **Folder** | `technova/` |
 **Key Features:**
