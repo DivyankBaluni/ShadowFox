@@ -45,9 +45,9 @@ A responsive personal portfolio website showcasing my background, skills, and pr
 
 | Detail | Info |
 |--------|------|
-| 🔗 **Live Demo** | [portfolio-shadowfx.netlify.app](https://technova-ecommerce.netlify.app/) |
+| 🔗 **Live Demo** | [e-commerce-shadowfx.netlify.app](https://shadow-fox-jade.vercel.app/) |
 | 🛠️ **Tech Stack** | HTML, CSS, JavaScript |
-| 📁 **Folder** | `TechNova/` |
+| 📁 **Folder** | `technova/` |
 **Key Features:**
 - Modern responsive UI
 - Dark / Light mode support
@@ -74,7 +74,7 @@ ShadowFox/
 │   ├── js/
 |   └── assets/
 |
-├── TechNova/ 
+├── technova/ 
 │   ├── cart.html 
 │   ├── checkout.html 
 │   ├── index.html 
